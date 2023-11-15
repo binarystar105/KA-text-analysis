@@ -2,8 +2,19 @@ html {
   font-size: 16px;
 }
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  background-color: #f5f6f7;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #ffffff;
+}
+.myDiv {
+  text-align: center;
+}
+
+.myLogo {
+  margin-top: 30px;
+}
+
+.hero {
+  background-color: #f8f9fa;
 }
 
 .btn {
@@ -23,12 +34,13 @@ body {
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.tag, .table{
-  font-family: 'IBM Plex Mono';
+.tag,
+.table {
+  font-family: "IBM Plex Mono";
 }
 
 button {
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .card-footer-item {
@@ -81,15 +93,15 @@ button {
   top: 0;
   min-width: 100px;
   padding: 1rem 1.25rem 1rem 1.25rem;
-  transition: .3s;
+  transition: 0.3s;
   text-align: center;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
 .notification:hover {
   cursor: pointer;
-  transition: .3s;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .2);
+  transition: 0.3s;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
 @-webkit-keyframes slideInRight {
@@ -121,8 +133,8 @@ button {
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
-  -webkit-animation-duration: .3s;
-  animation-duration: .3s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -156,29 +168,30 @@ button {
 .slideOutRight {
   -webkit-animation-name: slideOutRight;
   animation-name: slideOutRight;
-  -webkit-animation-duration: .3s;
-  animation-duration: .3s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 /*** LEGEND **/
-.fieldset{
+.fieldset {
   background-color: #fff;
-   border-radius: 6px;
-   box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
-   color: #4a4a4a;
-   display: block;
-   padding: 1.25rem;
-  border: 1px solid #ccc
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
 }
-.fieldset  > legend{
-   color: #363636;
-   display: block;
-   font-size: 1rem;
-   font-weight: 700;
-   background-color: #fff;
-   padding: 0 5px;
- width: max-content;
- border: 0 none
+.fieldset > legend {
+  color: #363636;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #fff;
+  padding: 0 5px;
+  width: max-content;
+  border: 0 none;
 }
