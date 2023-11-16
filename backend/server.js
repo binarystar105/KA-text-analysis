@@ -3,12 +3,22 @@ const myCOS = require("ibm-cos-sdk");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 const express = require("express");
+
+
+// For App-ID
+var passport = require('passport');
+var APIStrategy = require('ibmcloud-appid').APIStrategy; 
+passport.use(new APIStrategy({ oauthServerUrl: "https://eu-de.appid.cloud.ibm.com/oauth/v4/e149ebaf-5fd1-4b73-beeb-0d7d5376f134" })); 
+
 const app = express();
 const path = require("path");
 var atob = require("atob");
 require("dotenv").config({
   silent: true,
 });
+
+// For App-ID
+app.use(passport.initialize());
 
 const cors = require("cors");
 app.use(cors());
