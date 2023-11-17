@@ -1,18 +1,20 @@
 {
-  "name": "codeengine-image-classification",
+  "name": "IBM-Cloud-CodeEngine-NLU",
   "version": "1.0.0",
-  "description": "Text analysis with Code Engine and Watson Visual Recognition",
+  "description": "File-based Text analysis using Natural Language Understanding (NLU)",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vidyasagar Machupalli",
+  "author": "Khuloud Alketbi",
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.8.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
     "request": "^2.88.2"
   }
 }

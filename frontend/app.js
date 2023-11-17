@@ -7,30 +7,30 @@ require("dotenv").config({
   silent: true
 });
 
-// // For app-id use
-// const session = require('express-session');							// https://www.npmjs.com/package/express-session
-// const passport = require('passport');								// https://www.npmjs.com/package/passport
-// const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy
-// app.use(session({
-//   secret: "123456",
-//   resave: true,
-//   saveUninitialized: true
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-// passport.serializeUser((user, cb) => cb(null, user));
-// passport.deserializeUser((user, cb) => cb(null, user));
-// passport.use(new WebAppStrategy({
-//  tenantId: "e149ebaf-5fd1-4b73-beeb-0d7d5376f134",
-//  clientId: "c1193bc8-05c3-4d1d-8dbb-5d373d9309c8",
-//  secret: "ODFjOTlkZWQtYWFhOC00MDY0LWIwODEtNTdkOTc0ZTg3NzVl",
-//  oauthServerUrl: "https://eu-de.appid.cloud.ibm.com/oauth/v4/e149ebaf-5fd1-4b73-beeb-0d7d5376f134",
-//  redirectUri: "https://frontend-fromsource.19och3p6ofdl.eu-de.codeengine.appdomain.cloud/appid/callback"
-//  }));
-// // Handle callback
-// app.get('/appid/callback', passport.authenticate(WebAppStrategy.STRATEGY_NAME));
-// // Protect the whole app
-// app.use(passport.authenticate(WebAppStrategy.STRATEGY_NAME));
+// For app-id use
+const session = require('express-session');							// https://www.npmjs.com/package/express-session
+const passport = require('passport');								// https://www.npmjs.com/package/passport
+const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy
+app.use(session({
+  secret: "123456",
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser((user, cb) => cb(null, user));
+passport.deserializeUser((user, cb) => cb(null, user));
+passport.use(new WebAppStrategy({
+ tenantId: "e149ebaf-5fd1-4b73-beeb-0d7d5376f134",
+ clientId: "c1193bc8-05c3-4d1d-8dbb-5d373d9309c8",
+ secret: "ODFjOTlkZWQtYWFhOC00MDY0LWIwODEtNTdkOTc0ZTg3NzVl",
+ oauthServerUrl: "https://eu-de.appid.cloud.ibm.com/oauth/v4/e149ebaf-5fd1-4b73-beeb-0d7d5376f134",
+ redirectUri: "https://frontend-fromsource.19och3p6ofdl.eu-de.codeengine.appdomain.cloud/appid/callback"
+ }));
+// Handle callback
+app.get('/appid/callback', passport.authenticate(WebAppStrategy.STRATEGY_NAME));
+// Protect the whole app
+app.use(passport.authenticate(WebAppStrategy.STRATEGY_NAME));
 
 
 const cors = require("cors");
