@@ -3,10 +3,10 @@ const myCOS = require("ibm-cos-sdk");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 const express = require("express");
-
-const app = express();
 const path = require("path");
 var atob = require("atob");
+const app = express();
+
 require("dotenv").config({
   silent: true,
 });
